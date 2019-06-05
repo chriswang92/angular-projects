@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="onToggleDetails()"> Display Details </button>
+<p *ngIf="displayDetails"> Secret Password = Avocado </p>
+<hr>
+<div *ngFor="let log of logs; let i = index"
+[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" 
+[ngClass]="{'white-text': i >= 4}">
+{{log}}
+</div>

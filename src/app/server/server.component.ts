@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
     selector: 'app-server',
     templateUrl: './server.component.html',
     styles: [`
-        h3: {
-            color : dodger-blue
+        h3 {
+            color : dodger-blue;
+        }
+        .online {
+            color: white;
         }
     `]
 })
@@ -17,7 +20,7 @@ export class ServerComponent{
         this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
     }
 
-    getServerStatusByServerId(serverStatus, serverId) {
+    getServerStatusByServerId(serverStatus, serverId, serverName) {
         return 'with ID = ' + serverId + ' is --' + serverStatus + '--';
     }
 
